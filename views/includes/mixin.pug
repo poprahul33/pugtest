@@ -14,3 +14,14 @@ mixin addSliderImage(isActive, imagePath, text)
             .fill(style="background-image:url('" + imagePath +"');")
             .carousel-caption
                 h2= text
+                
+                
+mixin addNavStructure(pageName, prevPagelink, prevPageName, subHeading)
+    .row
+        .col-lg-12
+          h1.page-header= '| ' + pageName
+            small= subHeading
+          ol.breadcrumb
+            li
+              a(href= prevPageLink)= prevPageName
+            li.active= pageName
