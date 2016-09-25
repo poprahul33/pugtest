@@ -1,0 +1,16 @@
+mixin addPageLink(page, text)
+    li
+        a(href=page)= text
+        
+mixin addSliderImage(isActive, imagePath, text)
+    if isActive
+        .item.active
+            .fill(style="background-image:url('" + imagePath +"');")
+            .carousel-caption
+                h2= text
+    else
+        .item
+        
+            .fill(style="background-image:url('" + imagePath +"');")
+            .carousel-caption
+                h2= text

@@ -1,0 +1,23 @@
+// Header Carousel
+header#myCarousel.carousel.slide
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      // Wrapper for slides
+      
+      include ../includes/mixin.pug
+      
+      .carousel-inner
+        +addSliderImage(true, 'http://placehold.it/1900x1080&text=Slide One', 'Caption 1')
+        
+        +addSliderImage(false, 'http://placehold.it/1900x1080&text=Slide Two', 'Caption 2')
+        
+        +addSliderImage(false, 'http://placehold.it/1900x1080&text=Slide Three', 'Caption 3')
+        
+      // Controls
+      a.left.carousel-control(href='#myCarousel', data-slide='prev')
+        span.icon-prev
+      a.right.carousel-control(href='#myCarousel', data-slide='next')
+        span.icon-next
